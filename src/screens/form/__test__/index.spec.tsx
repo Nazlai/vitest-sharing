@@ -50,6 +50,8 @@ describe("test form screen", () => {
       await waitFor(() => expect(mockSubmit).toHaveBeenCalledTimes(1), {
         timeout: 9000,
       })
+
+      expect(screen.getByText(/all done!/i)).toBeVisible()
     }
   )
 
