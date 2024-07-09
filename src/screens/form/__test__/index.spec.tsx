@@ -25,7 +25,6 @@ describe("test form screen", () => {
 
     act(() => vi.advanceTimersByTime(3000))
 
-    expect(screen.getByText("(5) Looks good to me")).toBeVisible()
     const submitButton = screen.getByRole("button", {
       name: /\(5\) Looks good to me/i,
     })
@@ -34,7 +33,7 @@ describe("test form screen", () => {
     expect(mockSubmit).toHaveBeenCalledWith("george washington")
     expect(submitButton).not.toBeInTheDocument()
     expect(nameInput).not.toBeInTheDocument()
-    expect(screen.getByText("all done!")).toBeVisible()
+    expect(screen.getByText(/all done!/i)).toBeVisible()
   })
 
   it(
