@@ -10,6 +10,7 @@ export default defineConfig({
     alias: {
       "@/src": path.resolve(__dirname, "./src/"),
       "@/hooks": path.resolve(__dirname, "./src/hooks"),
+      "@/mocks": path.resolve(__dirname, "./src/mocks"),
     },
   },
 })
